@@ -5,8 +5,6 @@
 			{
 				"name": "Source to SIlver Postgres",
 				"type": "ExecutePipeline",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureInput": false
@@ -19,7 +17,7 @@
 					},
 					"waitOnCompletion": true,
 					"parameters": {
-						"source_systems": "neon_postgres",
+						"source_systems": "neon_postgress",
 						"adf_run_id": {
 							"value": "@pipeline().RunId",
 							"type": "Expression"
