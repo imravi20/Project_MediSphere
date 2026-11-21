@@ -408,7 +408,7 @@
 												"type": "AzureBlobFSReadSettings",
 												"recursive": true,
 												"modifiedDatetimeStart": {
-													"value": "@formatDateTime(variables('watermarkk_value'),'yyyy-MM-ddTHH:mm:ssZ')",
+													"value": "@if(\n    empty(variables('watermarkk_value')),\n    '1900-01-01T00:00:00Z',\n    formatDateTime(variables('watermarkk_value'),'yyyy-MM-ddTHH:mm:ssZ')\n)",
 													"type": "Expression"
 												},
 												"deleteFilesAfterCompletion": false
@@ -461,11 +461,11 @@
 		"parameters": {
 			"table_id": {
 				"type": "string",
-				"defaultValue": "1"
+				"defaultValue": "5"
 			},
 			"adf_run_id": {
 				"type": "string",
-				"defaultValue": "a1"
+				"defaultValue": "a5d"
 			}
 		},
 		"variables": {
