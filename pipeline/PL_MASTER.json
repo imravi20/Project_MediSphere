@@ -27,6 +27,7 @@
 			},
 			{
 				"name": "Source to SIlver ADLS csv",
+				"description": "From Source To Silver",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"policy": {
