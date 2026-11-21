@@ -63,6 +63,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "Insert In Progress Status",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -228,6 +234,35 @@
 							"type": "Query",
 							"text": {
 								"value": "update ctrl.audit_log set status='SUCCESS', end_time=SYSUTCDATETIME(), records_written=@{activity('Bronze to Silver').output.runOutput} where adf_run_id='@{pipeline().parameters.adf_run_id}' and table_id=@{pipeline().parameters.table_id}\n ",
+								"type": "Expression"
+							}
+						}
+					],
+					"scriptBlockExecutionTimeout": "02:00:00"
+				}
+			},
+			{
+				"name": "Insert In Progress Status",
+				"type": "Script",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "LS_AzureSqlDatabase",
+					"type": "LinkedServiceReference"
+				},
+				"typeProperties": {
+					"scripts": [
+						{
+							"type": "Query",
+							"text": {
+								"value": "insert into ctrl.audit_log(adf_run_id,table_id,stage,status,start_time)\nvalues ('@{pipeline().parameters.adf_run_id}',@{pipeline().parameters.table_id},'SOURCE_TO_SILVER','IN_PROGRESS',SYSUTCDATETIME())",
 								"type": "Expression"
 							}
 						}
