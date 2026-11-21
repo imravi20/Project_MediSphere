@@ -322,7 +322,7 @@
 					},
 					"cases": [
 						{
-							"value": "neon_postgress",
+							"value": "neon_postgres",
 							"activities": [
 								{
 									"name": "Source to Landing Ingestion",
