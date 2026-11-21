@@ -68,7 +68,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/MediSphere_Databricks/Project_MediSphere/Landing_To_Bronze",
+					"notebookPath": "/MediSphere_Databricks/Project_MediSphere/Databricks_Repo/Landing_To_Bronze",
 					"baseParameters": {
 						"source_system": {
 							"value": "@activity('Read Table Details').output.firstRow.source_system",
@@ -113,7 +113,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/MediSphere_Databricks/Project_MediSphere/Bronze_To_Silver",
+					"notebookPath": "/MediSphere_Databricks/Project_MediSphere/Databricks_Repo/Bronze_To_Silver",
 					"baseParameters": {
 						"table_name": {
 							"value": "@activity('Read Table Details').output.firstRow.silver_table_name",
