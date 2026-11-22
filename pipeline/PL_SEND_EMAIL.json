@@ -148,7 +148,7 @@
 				"typeProperties": {
 					"variableName": "logic_apps_body",
 					"value": {
-						"value": "{\n\"subject\":\"@{variables('email_subject')}\",\n\"email_receipients\":\"@{pipeline().globalParameters.email_receipients}\",\n\"body_header\":\"@{variables('body_footer')}\",\n\"body_footer\":\"@{variables('body_footer')}\",\n\"status_table\":@{activity('Read All Table Status').output.output.value}\n}\n",
+						"value": "{\n\"subject\":\"@{variables('email_subject')}\",\n\"email_receipients\":\"@{pipeline().globalParameters.email_receipients}\",\n\"body_header\":\"@{variables('body_footer')}\",\n\"body_footer\":\"@{variables('body_footer')}\",\n\"status_table\":@{activity('Read All Table Status').output.value}\n}\n",
 						"type": "Expression"
 					}
 				}
