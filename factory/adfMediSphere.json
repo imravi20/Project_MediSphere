@@ -1,0 +1,12 @@
+{
+	"name": "adfMediSphere",
+	"properties": {
+		"globalParameters": {
+			"email_receipients": {
+				"type": "string",
+				"value": "rabimajumder08@gmail.com"
+			}
+		}
+	},
+	"location": "centralindia"
+}
