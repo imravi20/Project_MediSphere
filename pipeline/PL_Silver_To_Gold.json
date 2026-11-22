@@ -136,7 +136,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"notebookPath": {
-									"value": "/MediSphere_Databricks/Project_MediSphere/Gold/NB_@{item().gold_table_name}",
+									"value": "/MediSphere_Databricks/Project_MediSphere/Databricks_Repo/Gold/NB_@{item().gold_table_name}\n",
 									"type": "Expression"
 								}
 							},
