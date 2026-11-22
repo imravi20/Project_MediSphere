@@ -1,0 +1,25 @@
+{
+	"name": "trigger_Medisphere",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_MASTER",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2026-11-23T03:00:00Z",
+				"endTime": "2026-11-24T03:05:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
